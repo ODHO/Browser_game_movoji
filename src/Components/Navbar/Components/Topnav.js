@@ -74,12 +74,16 @@ export const Topnav = () => {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="mt-4 h-screen flex flex-col md:justify-center">
+          <div
+            className={`mt-4 h-screen flex flex-col md:justify-center ${
+              isMenuOpen === "justify-center" ? activeTab : "justify-normal"
+            }`}
+          >
             {!activeTab && (
-              <ul className="flex flex-col items-center gap-4">
+              <ul className="flex flex-col items-center gap-4 mt-6">
                 <li
                   onClick={() => handleTabClick("howToPlay")}
-                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer ${
+                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black ${
                     activeTab === "howToPlay" ? "bg-gray-300" : ""
                   }`}
                 >
@@ -87,7 +91,7 @@ export const Topnav = () => {
                 </li>
                 <li
                   onClick={() => handleTabClick("progress")}
-                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer ${
+                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black ${
                     activeTab === "progress" ? "bg-gray-300" : ""
                   }`}
                 >
@@ -95,7 +99,7 @@ export const Topnav = () => {
                 </li>
                 <li
                   onClick={() => handleTabClick("archive")}
-                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer ${
+                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black ${
                     activeTab === "archive" ? "bg-gray-300" : ""
                   }`}
                 >
@@ -103,7 +107,7 @@ export const Topnav = () => {
                 </li>
                 <li
                   onClick={() => handleTabClick("contact")}
-                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer ${
+                  className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black ${
                     activeTab === "contact" ? "bg-gray-300" : ""
                   }`}
                 >
