@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Components/Navbar/index.tsx";
+import Switcher from "./Components/screens/Switcher";
+import { Route, Routes } from "react-router-dom";
+import Play from "./Components/screens/Play";
+import GameInProgress from "./Components/screens/GameInProgress";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Play />} />
+        <Route path="/Switcher" element={<Switcher />} />
+      </Routes>
+      {/* <Switcher /> */}
     </div>
   );
 }

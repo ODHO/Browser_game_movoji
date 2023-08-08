@@ -1,5 +1,23 @@
+
 .App {
-  text-align: center;
+  display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+    padding-left: calc(env(safe-area-inset-left, 0px) + 16px);
+    padding-right: calc(env(safe-area-inset-right, 0px) + 16px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
+    width: 100%;
+    max-width: 1256px;
+    margin: 16px auto;
+    align-self: center;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(3, 21, 20, 0.533) 0px 0px 32px;
+    position: relative;
+    border-radius: 16px;
+    height: 100vh;
+    text-align: center;
 }
 
 .App-logo {
