@@ -74,7 +74,7 @@ export const Topnav = () => {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="mt-4 h-screen flex flex-col">
+          <div className="mt-4 h-screen flex flex-col md:justify-center">
             {!activeTab && (
               <ul className="flex flex-col items-center gap-4">
                 <li
@@ -115,7 +115,7 @@ export const Topnav = () => {
               {activeTab && (
                 <button
                   onClick={handleBackClick}
-                  className="focus:outline-none text-gray-600 justify-start float-left md:block contents"
+                  className="focus:outline-none text-gray-600 justify-start float-left md:block contents absolute top-20 md:top-24"
                 >
                   <AiOutlineArrowLeft className="md:text-6xl text-4xl" />
                 </button>

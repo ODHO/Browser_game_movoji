@@ -18,7 +18,7 @@ const CorrectAnswer = () => {
           src={require("../assets/ping.png")}
         />
         <button
-          className="bg-none w-full md:w-2/4 p-3 flex w-full text-gray border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none gap-4 justify-center items-center"
+          className="bg-none md:w-2/4 p-3 flex w-full text-gray border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none gap-4 justify-center items-center"
           onClick={handlePlayAgain}
         >
           Play next <AiOutlineArrowRight />

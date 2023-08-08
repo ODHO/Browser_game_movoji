@@ -16,7 +16,7 @@ const UnSollvedGame = () => {
   };
   return (
     <>
-      <div id="inProgress" className="h-[600px] p-2">
+      <div id="inProgress" className="h-[600px] p-2 pt-24">
         <div className="border-amber-900 border-4 p-4 rounded-lg">
           {showIcon && (
             <BiQuestionMark
@@ -31,14 +31,14 @@ const UnSollvedGame = () => {
               admittedly harder clues, but still solvable.
             </div>
           )}
-          <div className="flex flex-col justify-center items-center text-center gap-9 w-full">
+          <div className="flex flex-col justify-center items-center text-center gap-4 w-full">
             <h2 className="md:text-6xl text-4xl py-2 flex flex-col gap-5">
               <span>❤️️</span>
               <span>🎭💎👨</span>
             </h2>
             <button
               type="button"
-              className="w-full md:w-2/4 lg:flex items-center text-sm leading-6 text-slate-400 py-1.5 pl-2 pr-3 border-none"
+              className="w-full md:w-2/4 lg:flex items-center text-sm leading-6 text-slate-400 py-1.5 border-none"
             >
               <input
                 className="bg-none p-3 w-full text-[#4D4D4D] border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none"

@@ -89,12 +89,12 @@ const GameInProgress = () => {
       {!isSubmitted && (
         <div
           id="inProgress"
-          className="h-[500px] flex flex-col justify-center items-center text-center gap-9"
+          className="h-[600px] flex flex-col justify-center items-center text-center gap-4"
         >
           <h2 className="md:text-6xl text-4xl">😅😃😁🥰</h2>
           <button
             type="button"
-            className="w-full md:w-2/4 lg:flex items-center text-sm leading-6 text-slate-400 py-1.5 pl-2 pr-3 border-none"
+            className="w-full md:w-2/4 lg:flex items-center text-sm leading-6 text-slate-400 py-1.5 border-none"
           >
             <input
               className="bg-none p-3 w-full text-gray border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none"
