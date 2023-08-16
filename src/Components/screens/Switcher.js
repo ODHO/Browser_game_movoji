@@ -5,33 +5,8 @@ import SolvedGame from "../screens/SolvedGame";
 import GameInProgress from "../screens/GameInProgress";
 
 const Switcher = () => {
-  // const [currentGame, setCurrentGame] = useState(3);
-  // const allGame = 3; // Set the maximum number of pages here
-
-  // const goToPreviousPage = () => {
-  //   setCurrentGame((prevPage) => Math.max(1, prevPage - 1));
-  // };
-
-  // const goToNextPage = () => {
-  //   setCurrentGame((prevPage) => Math.min(allGame, prevPage + 1));
-  // };
-
-  // let currentGameComponent;
-  // switch (currentGame) {
-  //   case 1:
-  //     currentGameComponent = <UnSollvedGame />;
-  //     break;
-  //   case 2:
-  //     currentGameComponent = <SolvedGame />;
-  //     break;
-  //   case 3:
-  //     currentGameComponent = <GameInProgress />;
-  //     break;
-  //   default:
-  //     currentGameComponent = <GameInProgress />;
-  // }
-  const allGame = 3; // You have 3 pages: unsolved, solved, and running
-  const [currentGame, setCurrentGame] = useState(3);
+  const allGame = 2;
+  const [currentGame, setCurrentGame] = useState(2);
 
   const goToPreviousPage = () => {
     setCurrentGame((prev) => Math.max(prev - 1, 1));
@@ -40,9 +15,9 @@ const Switcher = () => {
   const goToNextPage = () => {
     setCurrentGame((prev) => Math.min(prev + 1, allGame));
   };
+
   return (
     <div>
-      {/* {currentGameComponent} */}
       <div
         className="absolute bottom-0 justify-center items-center inline-flex"
         style={{ marginLeft: "-65px" }}
@@ -66,21 +41,21 @@ const Switcher = () => {
         />
       </div>
       <div className="content">
-        {currentGame === 1 && <UnsolvedTabContent />}
-        {currentGame === 2 && <SolvedTabContent />}
-        {currentGame === 3 && <RunningTabContent />}
+        {/* {currentGame === 1 && <UnsolvedTabContent />} */}
+        {currentGame === 1 && <SolvedTabContent />}
+        {currentGame === 2 && <RunningTabContent />}
       </div>
     </div>
   );
 };
 
-const UnsolvedTabContent = () => {
-  return (
-    <div>
-      <UnSollvedGame />
-    </div>
-  );
-};
+// const UnsolvedTabContent = () => {
+//   return (
+//     <div>
+//       <UnSollvedGame />
+//     </div>
+//   );
+// };
 
 const SolvedTabContent = () => {
   return (
