@@ -281,7 +281,7 @@ const GameInProgress = () => {
           ) : (
             <button
               className={`bg-none md:w-2/4 p-3 flex w-full text-gray border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none gap-4 justify-center items-center ${
-                remainingTime ? "hidden" : "flex"
+                countdown ? "hidden" : "flex"
               }`}
               onClick={handleNextQuestion}
             >
