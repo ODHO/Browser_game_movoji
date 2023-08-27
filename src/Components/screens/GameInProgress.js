@@ -220,10 +220,8 @@ const GameInProgress = () => {
           <div className="mt-4">
             <div
               id="inProgress"
-              className={`flex flex-col justify-center items-center text-center gap-4 ${
-                isTuesday
-                  ? "border-amber-900 border-4 p-4 rounded-lg h-[500px]"
-                  : "h-[600px]"
+              className={`flex flex-col justify-center items-center text-center gap-4 h-[500px]${
+                isTuesday ? "border-amber-900 border-4 p-4 rounded-lg" : ""
               }`}
             >
               {isTuesday && ( // Display the added code only on Thursdays
@@ -243,7 +241,7 @@ const GameInProgress = () => {
                 </div>
               )}
 
-              <h2 className="md:text-6xl text-4xl" style={{ width: "50%" }}>
+              <h2 className="md:text-6xl text-4xl sm:w-full w-6/12">
                 {questions[currentQuestionIndex]?.title.rendered}
               </h2>
               <button
@@ -275,13 +273,15 @@ const GameInProgress = () => {
             alt="Correct"
           />
           {remainingTime > 0 ? (
-            <p className="text-2xl font-semibold">
-              Next game in: {hours}h {minutes}m {seconds}s
-            </p>
+            <div>
+              <p className="text-2xl font-semibold">
+                Next game in: {hours}h {minutes}m {seconds}s
+              </p>
+            </div>
           ) : (
             <button
               className={`bg-none md:w-2/4 p-3 flex w-full text-gray border-2 border-black rounded-lg text-2xl focus-visible:outline-offset-none focus-visible:outline-none gap-4 justify-center items-center ${
-                countdown ? "hidden" : "flex"
+                countdown > 0 ? "hidden" : "flex"
               }`}
               onClick={handleNextQuestion}
             >

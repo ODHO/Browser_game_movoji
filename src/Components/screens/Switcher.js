@@ -4,7 +4,8 @@ import UnSollvedGame from "../screens/UnSollvedGame";
 import SolvedGame from "../screens/SolvedGame";
 import GameInProgress from "../screens/GameInProgress";
 
-const Switcher = () => {
+const Switcher = ({ loggedInUser }) => {
+  // Pass the loggedInUser prop here
   const allGame = 2;
   const [currentGame, setCurrentGame] = useState(2);
 
@@ -41,26 +42,21 @@ const Switcher = () => {
         />
       </div>
       <div className="content">
-        {/* {currentGame === 1 && <UnsolvedTabContent />} */}
-        {currentGame === 1 && <SolvedTabContent />}
+        {currentGame === 1 && <SolvedTabContent loggedInUser={loggedInUser} />}
+
+        {/* Pass loggedInUser prop here */}
         {currentGame === 2 && <RunningTabContent />}
       </div>
     </div>
   );
 };
 
-// const UnsolvedTabContent = () => {
-//   return (
-//     <div>
-//       <UnSollvedGame />
-//     </div>
-//   );
-// };
-
-const SolvedTabContent = () => {
+const SolvedTabContent = ({ loggedInUser }) => {
+  // Receive loggedInUser prop here
   return (
     <div>
-      <SolvedGame />
+      <SolvedGame loggedInUser={loggedInUser} />{" "}
+      {/* Pass loggedInUser prop to SolvedGame */}
     </div>
   );
 };

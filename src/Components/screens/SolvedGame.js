@@ -31,7 +31,7 @@ const SolvedGame = () => {
           </p>
         </div>
       ) : (
-        <div className="h-[600px] flex flex-col justify-center items-center text-center gap-4">
+        <div className="h-[500px] flex flex-col justify-center items-center text-center gap-4">
           {solvedQuestions.map((question, index) => (
             <div
               key={index}

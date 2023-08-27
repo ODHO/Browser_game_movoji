@@ -31,8 +31,11 @@ export const Topnav = () => {
           isMenuOpen ? "bg-[#DDDDDD]" : "bg[#ffffff]"
         }`}
       >
-        <div className="grid grid-cols-2">
-          <div className="flex items-center">
+        <div
+          className="flex flex-row items-center"
+          style={{ justifyContent: "space-between" }}
+        >
+          <div>
             {/* <img
               src="your-logo.png"
               alt="Logo"
@@ -42,7 +45,7 @@ export const Topnav = () => {
               <span className="text-4xl font-bold">movoji</span>
             </Link>
           </div>
-          <div className="float-right flex justify-end items-center gap-4">
+          <div className="float-right justify-end items-center gap-4">
             <button
               onClick={toggleMenu}
               className="focus:outline-none focus:ring-2 focus:ring-gray-500"
@@ -81,6 +84,12 @@ export const Topnav = () => {
           >
             {!activeTab && (
               <ul className="flex flex-col items-center gap-4 mt-6">
+                {/* <li className="my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black">
+                  <Link to="/login">login</Link>
+                </li>
+                <li className="my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black">
+                  <Link to="/signup">Signup</Link>
+                </li> */}
                 <li
                   onClick={() => handleTabClick("howToPlay")}
                   className={`my-2 hover:text-gray-800 transition duration-300 w-full md:w-2/4 bg-white p-4 rounded-full text-[#4D4D4D] text-2xl font-medium cursor-pointer border-2 border-black ${
